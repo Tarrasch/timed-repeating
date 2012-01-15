@@ -1,18 +1,16 @@
--- | In the documentation I often say "every hour", but of course that
+-- | In the documentation I often say every hour, but of course that
 --   time is configureable.
 module Control.Concurrent.TimedRepeating (
       timedRepeating
-    , TrSettings()
-    , trSettingsPeriodicity
     , defaultTrSettings
+    , trSettingsPeriodicity
+    , TrSettings()
     ) where
 
 import Data.IORef (IORef, newIORef, writeIORef)
 import Control.Monad (forever)
 import Control.Concurrent (forkIO, threadDelay)
 
--- | For usage of this type, please read about Settings Types
---   <http://www.yesodweb.com/blog/2011/10/settings-types>
 data TrSettings = TrSettings
     { -- | How often to repeat the action in microseconds.
       --   Set to 60*1000000 to run it every minute.
@@ -21,6 +19,8 @@ data TrSettings = TrSettings
     trSettingsPeriodicity :: Int
     }
 
+-- | For usage of this value, please read about
+--   <http://www.yesodweb.com/blog/2011/10/settings-types>
 defaultTrSettings :: TrSettings
 defaultTrSettings = TrSettings (60*1000000)
 
