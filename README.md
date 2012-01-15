@@ -1,4 +1,5 @@
 A small haskell library for running an action continiously
+(background jobs)
 without needing to bother about implementing concurrency and
 handling crashes.
 

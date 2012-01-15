@@ -1,6 +1,6 @@
 name:                timed-repeating
 version:             0.1
-synopsis:            Repeat actions every hour, useful in scraping
+synopsis:            Repeat actions every hour (background jobs), useful in scraping
 homepage:            https://github.com/Tarrasch/timed-repeating
 bug-reports:         https://github.com/Tarrasch/timed-repeating/issues
 license:             BSD3
